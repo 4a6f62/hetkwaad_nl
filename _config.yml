@@ -31,10 +31,10 @@ github_username:  4a6f62
 
 # Build settings
 theme: minima
-date_format: "%b %-d, %Y"
-remote_theme: pages-themes/hacker@v0.2.0
+  skin: dark
+  date_format: "%b %-d, %Y"
 plugins:
-- jekyll-remote-theme
+  - jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default.
