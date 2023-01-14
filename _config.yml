@@ -31,8 +31,7 @@ github_username:  4a6f62
 
 # Build settings
 theme: minima
-remote_theme: jekyll/minima
-skin: dark
+remote_theme: vaibhavvikas/jekyll-theme-minimalistic
 date_format: "%b %-d, %Y"
 plugins:
 - jekyll-feed
