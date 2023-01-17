@@ -30,10 +30,10 @@ twitter_username: 4a6f62
 github_username:  4a6f62
 
 # Build settings
-theme: minima
-  skin: dark
+remote_theme: pages-themes/hacker@v0.2.0
 date_format: "%b %-d, %Y"
 plugins:
+- jekyll-remote-theme
 - jekyll-feed
 
 # Exclude from processing.
