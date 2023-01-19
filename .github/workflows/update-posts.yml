@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Run script to get articles from dev.to
+      - name: Run script to get videos from youtube
         #### Thing to notice 2 ####
         run: |
           ./scripts/post_files_from_GET_json.sh
