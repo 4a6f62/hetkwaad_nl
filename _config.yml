@@ -32,7 +32,6 @@ remote_theme: pages-themes/minimal@v0.2.0
 date_format: "%b %-d, %Y"
 plugins:
 - jekyll-remote-theme
-- jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default.
