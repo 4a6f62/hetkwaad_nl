@@ -28,7 +28,10 @@ twitter_username: 4a6f62
 github_username:  4a6f62
 
 # Build settings
-remote_theme: pages-themes/minimal@v0.2.0
-date_format: "%b %-d, %Y"
+markdown: kramdown
+theme: minima
 plugins:
-- jekyll-remote-theme
+  - jekyll-feed
+
+permalink: pretty
+date_format: "%b %-d, %Y"
