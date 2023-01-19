@@ -10,7 +10,7 @@ response=$(curl -s $feed_url)
 json=$(echo $response | xml2json -t json)
 
 # Loop through the items in the JSON
-for item in $(echo $json | jq -r '.rss.channel.item[]'); do
+for item in $(echo $json | jq -r '.feed.entry[]'); do
     # Extract the title, link, and published date from the item
     title=$(echo $item | jq -r '.title')
     link=$(echo $item | jq -r '.link')
