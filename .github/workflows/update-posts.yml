@@ -1,26 +1,27 @@
 name: Update Posts
 
-#### Thing to notice 1 ####
 on:
   schedule:
     - cron:  '0 2 * * *'
   workflow_dispatch:
 
 jobs:
-  run-script:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+    - uses: actions/checkout@v2
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 14
+    - name: Install xml2json
+      run: npm install -g xml2json
+    - name: Run script
+      run: bash ${GITHUB_WORKSPACE}/scripts/post_files_from_GET_json.sh          
 
-      - name: Run script to get videos from youtube
-        #### Thing to notice 2 ####
-        run: |
-          chmod +x "${GITHUB_WORKSPACE}/scripts/post_files_from_GET_json.sh"
-          bash ${GITHUB_WORKSPACE}/scripts/post_files_from_GET_json.sh
-
-      - name: Commit to the repo
-        run: |
+    - name: Commit to the repo
+      run: |
           git config --global user.name '4a6f62'
           git config --global user.email '4a6f62@users.noreply.github.com'
           git add .
