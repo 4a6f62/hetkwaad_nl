@@ -11,14 +11,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Setup Node.js
-      uses: actions/setup-node@v2
+    - name: Setup Python
+      uses: actions/setup-python@v2
       with:
-        node-version: 14
-    - name: Install xml2json
-      run: npm install -g xml2json
+        python-version: 3.8
+    - name: Install dependencies
+      run: pip install requests
     - name: Run script
-      run: bash ${GITHUB_WORKSPACE}/scripts/post_files_from_GET_json.sh          
+      run: python yt.py        
 
     - name: Commit to the repo
       run: |
