@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# URL for the YouTube RSS feed
+# URL for the YouTube RSS feed for 4a6f62
 feed_url='https://www.youtube.com/feeds/videos.xml?channel_id=UCf2KRp067F-apDi9qfmEHfQ'
 
 # Fetch the RSS feed
