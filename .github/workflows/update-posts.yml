@@ -16,7 +16,8 @@ jobs:
       - name: Run script to get videos from youtube
         #### Thing to notice 2 ####
         run: |
-          ./scripts/post_files_from_GET_json.sh
+          chmod +x "${GITHUB_WORKSPACE}/scripts/post_files_from_GET_json.sh"
+          bash ${GITHUB_WORKSPACE}/scripts/post_files_from_GET_json.sh
 
       - name: Commit to the repo
         run: |
