@@ -31,6 +31,8 @@ github_username:  4a6f62
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
 
 permalink: pretty
 date_format: "%b %-d, %Y"
