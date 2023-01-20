@@ -10,3 +10,4 @@ github_username:  4a6f62
 # Build settings
 permalink: pretty
 date_format: "%b %-d, %Y"
+theme: minima
