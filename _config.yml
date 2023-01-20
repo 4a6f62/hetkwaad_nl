@@ -8,6 +8,5 @@ twitter_username: 4a6f62
 github_username:  4a6f62
 
 # Build settings
-theme: minima
 permalink: pretty
 date_format: "%b %-d, %Y"
