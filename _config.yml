@@ -28,7 +28,6 @@ twitter_username: 4a6f62
 github_username:  4a6f62
 
 # Build settings
-markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
