@@ -1,0 +1,28 @@
+<html><head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background: black;
+            color: limegreen;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>H4ck3d by 4a6f62</h1>
+    </div>
+    <div>
+        <p>Secure your servers!</p>
+    </div>
+    <div>
+    {{ content }}
+    </div>
+</body></html>
