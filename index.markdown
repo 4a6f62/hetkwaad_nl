@@ -5,4 +5,11 @@
 layout: hacked_index
 ---
 
-<a href="javascript:void(window.open('view-source:'+location.href))">Klik hier voor de bron van het kwaad.</a>
+<a href="#" onclick="showSource(); return false;">Klik hier voor de bron van het kwaad.</a>
+
+
+<script>
+function showSource() {
+  window.location = "view-source:" + window.location;
+}
+</script>
