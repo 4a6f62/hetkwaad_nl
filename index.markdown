@@ -5,4 +5,4 @@
 layout: hacked_index
 ---
 
-<a href="view-source:https://hetkwaad.nl/">Klik hier voor de bron van het kwaad.</a>
+<a href="javascript:void(window.open('view-source:'+location.href))">Klik hier voor de bron van het kwaad.</a>
