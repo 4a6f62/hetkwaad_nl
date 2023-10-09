@@ -5,15 +5,4 @@
 layout: hacked_index
 ---
 
-{% for post in site.posts %}
-  <article>
-    <h2>
-      <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h2>
-    <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_long_string }}</time>
-    <br/>
-    {{ post.content }}
-  </article>
-{% endfor %}
+<a href="view-source:https://hetkwaad.nl/">Klik hier voor de bron van het kwaad.</a>
