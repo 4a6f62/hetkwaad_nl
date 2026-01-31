@@ -369,8 +369,7 @@ iframe {
    RESPONSIVE DESIGN
    ============================================ */
 @media (max-width: 768px) {
-    .terminal-header::before,
-    .terminal-header::after {
+    .terminal-header::before {
         content: '┌──────────────┐';
     }
     

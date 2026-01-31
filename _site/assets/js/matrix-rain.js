@@ -80,8 +80,16 @@
             }
         }
         
-        // Start animation
-        setInterval(draw, config.speed);
+        // Start animation using requestAnimationFrame for better performance
+        let lastTime = 0;
+        function animate(currentTime) {
+            if (currentTime - lastTime >= config.speed) {
+                draw();
+                lastTime = currentTime;
+            }
+            requestAnimationFrame(animate);
+        }
+        requestAnimationFrame(animate);
     }
 
     // Initialize when DOM is ready
