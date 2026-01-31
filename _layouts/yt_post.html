@@ -1,7 +1,25 @@
 ---
-layout: yt_post
+layout: default
 ---
 
-<h1>{{ page.title }}</h1>
-<small>{{ page.date | date: "%-d %B %Y" }}</small>
-{{content}}
+<article class="post">
+    <div class="terminal-box" style="margin-bottom: 30px;">
+        <h1 style="margin: 0 0 10px 0; font-size: 2em;">{{ page.title }}</h1>
+        <small style="opacity: 0.8;">
+            <span class="glow">█</span> {{ page.date | date: "%-d %B %Y" }} 
+            <span class="glow">█</span>
+        </small>
+    </div>
+    
+    <div class="post-content" style="margin: 30px 0;">
+        {{content}}
+    </div>
+    
+    {% if page.youtube_link %}
+    <div style="margin: 30px 0; text-align: center;">
+        <a href="{{ page.youtube_link }}" target="_blank" class="btn" style="display: inline-block; text-decoration: none;">
+            > Watch on YouTube
+        </a>
+    </div>
+    {% endif %}
+</article>
