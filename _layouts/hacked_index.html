@@ -1,127 +1,53 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+<html lang="nl">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {%- seo -%}
     {%- feed_meta -%}
-    
-    <!-- Hacker Theme Styles -->
-    <link rel="stylesheet" href="{{ '/assets/css/hacker-theme.css' | relative_url }}">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-    
-    <!-- Typed.js for typing animations (via CDN) -->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.16"></script>
-    
+    <title>{{ page.title | default: site.title }}</title>
     <style>
         body {
+            background: #000;
+            color: #39FF14;
+            font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
+            min-height: 100vh;
+            margin: 0;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            text-align: center;
-            padding: 20px;
+            justify-content: flex-start;
         }
-        
-        .hacked-container {
-            max-width: 800px;
-            margin: 0 auto;
+        a, a:visited {
+            color: #39FF14;
+            text-decoration: underline;
+            font-family: inherit;
+            transition: text-shadow 0.3s;
         }
-        
-        .ascii-art {
-            font-size: 10px;
-            line-height: 1.2;
-            white-space: pre;
-            color: var(--neon-green);
-            text-shadow: 0 0 10px var(--green-glow);
+        a:hover, a:focus {
+            text-shadow: 0 0 4px #39FF14, 0 0 12px #39FF14;
         }
-        
-        .main-title {
-            font-size: 2.5em;
-            margin: 30px 0 20px 0;
-            animation: glitch 2s infinite;
+        .terminal-container {
+            margin-top: 3em;
+            background: rgba(0,0,0,0.85);
+            border: 2px solid #39FF14;
+            border-radius: 10px;
+            box-shadow: 0 0 24px #39FF1433;
+            padding: 2em 2.5em;
+            width: 100%;
+            max-width: 700px;
         }
-        
-        .subtitle {
-            font-size: 1.2em;
-            margin: 20px 0;
-            opacity: 0.9;
-        }
-        
-        @media (max-width: 768px) {
-            .ascii-art {
-                font-size: 6px;
-            }
-            .main-title {
-                font-size: 1.8em;
-            }
+        @media (max-width: 800px) {
+            .terminal-container { max-width: 98vw; padding: 1em; }
         }
     </style>
+    <!-- Placeholder for future Matrix Rain animation -->
+    <div id="matrix-rain-placeholder" style="display:none;"></div>
 </head>
-
 <body>
-    <div class="hacked-container">
-        <div class="ascii-art">
- ██░ ██  ▄▄▄       ▄████▄   ██ ▄█▀▓█████ ▓█████▄ 
-▓██░ ██▒▒████▄    ▒██▀ ▀█   ██▄█▒ ▓█   ▀ ▒██▀ ██▌
-▒██▀▀██░▒██  ▀█▄  ▒▓█    ▄ ▓███▄░ ▒███   ░██   █▌
-░▓█ ░██ ░██▄▄▄▄██ ▒▓▓▄ ▄██▒▓██ █▄ ▒▓█  ▄ ░▓█▄   ▌
-░▓█▒░██▓ ▓█   ▓██▒▒ ▓███▀ ░▒██▒ █▄░▒████▒░▒████▓ 
- ▒ ░░▒░▒ ▒▒   ▓▒█░░ ░▒ ▒  ░▒ ▒▒ ▓▒░░ ▒░ ░ ▒▒▓  ▒ 
- ▒ ░▒░ ░  ▒   ▒▒ ░  ░  ▒   ░ ░▒ ▒░ ░ ░  ░ ░ ▒  ▒ 
- ░  ░░ ░  ░   ▒   ░        ░ ░░ ░    ░    ░ ░  ░ 
- ░  ░  ░      ░  ░░ ░      ░  ░      ░  ░   ░    
-                  ░                        ░      
-        </div>
-        
-        <h1 class="main-title" id="hacked-title">H4ck3d by 4a6f62</h1>
-        
-        <div class="terminal-box" style="margin: 30px auto; max-width: 600px;">
-            <p class="subtitle">LOL, not really — Secure your servers!</p>
-        </div>
-        
-        <div style="margin: 40px 0;">
-            {{ content }}
-        </div>
-        
-        <div class="terminal-box" style="margin: 30px auto; max-width: 500px; font-size: 0.9em;">
-            <p>> ACCESS GRANTED</p>
-            <p>> SYSTEM STATUS: <span class="glow">COMPROMISED</span></p>
-            <p>> THREAT LEVEL: <span style="color: #ff0000; text-shadow: 0 0 10px #ff0000;">CRITICAL</span></p>
-        </div>
+    <div class="terminal-container">
+        {{ content }}
     </div>
-
-    <!-- Matrix Rain Background -->
-    <script src="{{ '/assets/js/matrix-rain.js' | relative_url }}"></script>
-    
-    <!-- Typing animation for title -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const titleElement = document.getElementById('hacked-title');
-            if (titleElement && typeof Typed !== 'undefined') {
-                const originalText = titleElement.textContent;
-                titleElement.textContent = '';
-                
-                new Typed('#hacked-title', {
-                    strings: [originalText],
-                    typeSpeed: 80,
-                    startDelay: 500,
-                    showCursor: true,
-                    cursorChar: '_',
-                    onComplete: function(self) {
-                        setTimeout(function() {
-                            self.cursor.style.animation = 'blink 0.7s infinite';
-                        }, 100);
-                    }
-                });
-            }
-        });
-    </script>
 </body>
 </html>
