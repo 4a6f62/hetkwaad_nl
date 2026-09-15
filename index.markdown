@@ -11,6 +11,8 @@ title: De bron van het kwaad
 _De bron van het kwaad? Check de bron._  
 <small><em>(The source of evil? Check the source.)</em></small>
 
+<p style="opacity:0.75; font-style:italic;">// Be the Butterfly.</p>
+
 [Bekijk de bron (GitHub Repo)](https://github.com/4a6f62/hetkwaad_nl){:target="_blank"}
 
 ---
