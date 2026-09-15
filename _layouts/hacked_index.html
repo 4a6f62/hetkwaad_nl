@@ -41,6 +41,13 @@
         @media (max-width: 800px) {
             .terminal-container { max-width: 98vw; padding: 1em; }
         }
+        .site-footer {
+            margin: 1.5em 0 3em;
+            font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
+            font-size: 13px;
+            opacity: 0.85;
+        }
+        .site-footer a { color: #39FF14; }
     </style>
     <!-- Placeholder for future Matrix Rain animation -->
     <div id="matrix-rain-placeholder" style="display:none;"></div>
@@ -49,5 +56,6 @@
     <div class="terminal-container">
         {{ content }}
     </div>
+    <div class="site-footer"><a href="{{ '/privacy.html' | relative_url }}">Privacy Policy</a></div>
 </body>
 </html>
